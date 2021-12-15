@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include venue *.css
+recursive-include venue *.csv
+recursive-include venue *.html
+recursive-include venue *.ico
+recursive-include venue *.js
+recursive-include venue *.json
+recursive-include venue *.md
+recursive-include venue *.png
+recursive-include venue *.py
+recursive-include venue *.svg
+recursive-include venue *.txt
+recursive-exclude venue *.pyc
