@@ -1,42 +1,36 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2021-12-15 17:24:14.494595",
+ "creation": "2021-12-16 15:53:57.388092",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "customer",
-  "venue",
-  "from_date",
-  "to_date"
+  "list_venue_data",
+  "get_venue_data",
+  "venue_list"
  ],
  "fields": [
   {
-   "fieldname": "customer",
-   "fieldtype": "Link",
-   "label": "Customer",
-   "options": "Venue Booking"
+   "fieldname": "list_venue_data",
+   "fieldtype": "Heading",
+   "label": "List Venue Data"
   },
   {
-   "fieldname": "from_date",
-   "fieldtype": "Read Only",
-   "label": "From Date"
+   "fieldname": "venue_list",
+   "fieldtype": "Table",
+   "label": "venue List",
+   "options": "Data"
   },
   {
-   "fieldname": "to_date",
-   "fieldtype": "Read Only",
-   "label": "To Date"
-  },
-  {
-   "fieldname": "venue",
-   "fieldtype": "Read Only",
-   "label": "venue"
+   "fieldname": "get_venue_data",
+   "fieldtype": "Button",
+   "label": "get venue data"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-12-15 20:39:05.107126",
+ "modified": "2021-12-16 18:38:39.793929",
  "modified_by": "Administrator",
  "module": "Venue",
  "name": "Venue Data",
@@ -57,5 +51,6 @@
  ],
  "quick_entry": 1,
  "sort_field": "modified",
- "sort_order": "DESC"
+ "sort_order": "DESC",
+ "track_changes": 1
 }
