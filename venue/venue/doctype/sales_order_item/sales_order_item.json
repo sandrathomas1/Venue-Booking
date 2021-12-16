@@ -1,0 +1,62 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2021-12-15 20:18:27.627781",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_name",
+  "rate",
+  "available_qty",
+  "qty",
+  "total"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item name",
+   "options": "Items",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "item_name.rate",
+   "fieldname": "rate",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Rate"
+  },
+  {
+   "fetch_from": "item_name.qty",
+   "fieldname": "available_qty",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Available Qty"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Total",
+   "reqd": 1
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Int",
+   "label": "Qty",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-12-15 20:25:23.962858",
+ "modified_by": "Administrator",
+ "module": "Venue",
+ "name": "Sales Order Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
