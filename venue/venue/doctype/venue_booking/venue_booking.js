@@ -33,5 +33,5 @@ frappe.ui.form.on('Sales Order Item',{ qty:function(frm, cdt, cdn) {
     refresh_field("total");
     
 }
-
 });
+

@@ -16,3 +16,17 @@ class VenueBooking(WebsiteGenerator):
 		)
 		if exists:
 			frappe.throw("The venue already Booked On That Day")
+	#@frappe.whitelist()
+	def before_submit(self):
+		doc=frappe.get_doc({
+		'doctype':"Venue Data",
+		'customer':self.customer,
+		'venue': self.venue,
+		'from_date': self.from_date,
+		'to_date': self.to_date
+		})
+		doc.insert()
+		doc.submit()
+
+		
+

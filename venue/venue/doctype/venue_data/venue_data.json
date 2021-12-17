@@ -7,8 +7,10 @@
  "engine": "InnoDB",
  "field_order": [
   "list_venue_data",
-  "get_venue_data",
-  "venue_list"
+  "customer",
+  "venue",
+  "from_date",
+  "to_date"
  ],
  "fields": [
   {
@@ -17,20 +19,29 @@
    "label": "List Venue Data"
   },
   {
-   "fieldname": "venue_list",
-   "fieldtype": "Table",
-   "label": "venue List",
-   "options": "Data"
+   "fieldname": "customer",
+   "fieldtype": "Data",
+   "label": "Customer"
   },
   {
-   "fieldname": "get_venue_data",
-   "fieldtype": "Button",
-   "label": "get venue data"
+   "fieldname": "venue",
+   "fieldtype": "Data",
+   "label": "Venue"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-12-16 18:38:39.793929",
+ "modified": "2021-12-17 10:20:41.485708",
  "modified_by": "Administrator",
  "module": "Venue",
  "name": "Venue Data",

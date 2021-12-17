@@ -50,7 +50,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-12-15 20:09:41.365754",
+ "modified": "2021-12-16 19:18:35.008396",
  "modified_by": "Administrator",
  "module": "Venue",
  "name": "Customer",
@@ -70,6 +70,7 @@
   }
  ],
  "quick_entry": 1,
+ "show_name_in_global_search": 1,
  "sort_field": "modified",
  "sort_order": "DESC"
 }
