@@ -13,11 +13,13 @@ frappe.ui.form.on('Venue Booking', {
                 venue_booking: frm.doc.name
             })
         })
-        //frm.add_custom_button('Venue Data', () => {
-        //   frappe.new_doc('Venue Data', {
-        //        venue_booking: frm.doc.name
-          //  })
-        //})
+        //let $btn = page.set_primary_action('New', () => create_new(), 'octicon octicon-plus')
+           // frappe.msgprint("Custom Information");};
+        frm.add_custom_button(__('Book'), function() { 
+                  // click
+        });
+        
+
         var d = locals[cdt][cdn];
         frappe.model.set_value(cdt, cdn, "total_days", frappe.datetime.get_day_diff( d.to_date , d.from_date));
         refresh_field("total_days");
@@ -33,5 +35,19 @@ frappe.ui.form.on('Sales Order Item',{ qty:function(frm, cdt, cdn) {
     refresh_field("total");
     
 }
+//get_venue_data: function(frm){
+      //  frappe.call({
+        //method:'list_venue_data',
+        //doc:frm.doc,
+        //args:{
+        //doctype:"Venue Booking",
+        
+    //},
+      //  callback:function(r){
+       // frappe.msgprint("successfully updated")
+       // frm.refresh_field('data')
+       // }
+       // });
+    //    }
 });
 

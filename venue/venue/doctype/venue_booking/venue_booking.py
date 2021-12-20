@@ -5,28 +5,17 @@ import frappe
 from frappe.website.website_generator import WebsiteGenerator
 
 class VenueBooking(WebsiteGenerator):
-	def before_save(self):
-		exists = frappe.db.exists(
-			"Venue Booking",
-			{
-				"venue":self.venue,
-				"docstatus": 1,
-				"to_date": (">", self.from_date),
-			},
-		)
-		if exists:
-			frappe.throw("The venue already Booked On That Day")
+		pass
+{
 	#@frappe.whitelist()
-	def before_submit(self):
-		doc=frappe.get_doc({
-		'doctype':"Venue Data",
-		'customer':self.customer,
-		'venue': self.venue,
-		'from_date': self.from_date,
-		'to_date': self.to_date
-		})
-		doc.insert()
-		doc.submit()
+	#def get_venue_data (self,doctype):
+	#	data = frappe.get_all(doctype,fields=["*"])
+	#	for d in data:
+	#		self.append("data",{
+	#			"customer":d.customer,
+	#			"venue":d.venue,
+	#			"from_date":d.from_date,
+	#			"to_date":d.to_date
+}
 
-		
 

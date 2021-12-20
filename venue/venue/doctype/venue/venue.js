@@ -8,5 +8,6 @@ frappe.ui.form.on('Venue', {
                 venue: frm.doc.name
             })
 		})
+		
 	}
 });
